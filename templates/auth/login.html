@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% block style %}
+<style>
+    .or-seperator {
+        margin: 20px 0 10px;
+        text-align: center;
+        border-top: 1px solid #ccc;
+    }
+    .or-seperator i {
+        padding: 0 10px;
+        background: #f7f7f7;
+        position: relative;
+        top: -11px;
+        z-index: 1;
+    }
+    .login__form{
+        zoom: 1.3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 40%;
+        margin: auto;
+        min-width: 350px;
+        max-width: 500px;
+    }
+    .form-group{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: auto;
+        min-width: 350px;
+        justify-content: space-between;
+    }
+    .login__google{
+        width: 100%;
+        text-align: center;
+        border: 1px solid black;
+        color: black;
+        border-radius: 6px;
+        padding: 4px;
+    }
+    a{
+        text-decoration: none;
+    }
+    .form__element{
+        width: 100%;
+    }
+    .btn-success{
+        color: white;
+        border: none;
+    }
+    .pass, .username{
+        margin-bottom: 8px;
+        display: flex;
+        flex-direction: column;
+    }
+</style>
+{% endblock %}
+
+{% block body %}
+<main role="main"class="login__form">
+    <br>
+    <h1>Welcome Back!</h1>
+    <a href="#" class="form__element login__google">
+        <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />Sign In With Google
+    </a>
+    <div class="or-seperator"><i>or</i></div>
+    <div class="username form__element">
+        <label for="">Email <sup>*</sup> </label>
+        <input type="email" name="" id="email" placeholder="Enter Email">
+    </div>
+    <div class="pass form__element">
+        <label for="">Password<sup>*</sup></label>
+        <input type="password" name="" id="password" placeholder="Enter Password">
+    </div>
+    <br>
+    <a href="#" class="form__element login__google btn-success">
+        Login
+    </a>
+    <br>
+    <br>
+    <p>Don't have an account? Please <em><a href="/register/">Register</a></em></p>
+</main>
+{% endblock %}
